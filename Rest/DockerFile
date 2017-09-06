@@ -1,0 +1,5 @@
+FROM maven:3.3-jdk-7
+RUN mkdir -p /usr/src/app
+EXPOSE 8080
+ADD ./ /usr/src/app
+RUN cd /usr/src/app && mvn clean test
