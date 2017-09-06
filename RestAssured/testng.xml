@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="5" >
+	<test name="Test1">
+	    <parameter name="AppPath" value="C:\\Users\\anurag.garg1\\Downloads\\Appium\\TotalCalculator.apk"/>
+		<parameter name="URL" value="http://127.0.0.1:1234/wd/hub"/>
+		<parameter name="DeviceName" value="emulator-5554"/>
+		<parameter name="platformName" value="Android"/>
+		<parameter name="platformVersion" value="4.4.2"/>
+		<parameter name="appPackage" value="app.kwc.math.totalcalc"/>
+		<parameter name="appActivity" value=".TotalCalculator"/>
+			<classes>
+				<class name="com.automation.mobile.TestCases.Verify_Addition"/>
+			</classes>
+	</test>
+	<test name="Test2">
+	    <parameter name="AppPath" value="C:\\Users\\anurag.garg1\\Downloads\\Appium\\TotalCalculator.apk"/>
+		<parameter name="URL" value="http://127.0.0.1:3456/wd/hub"/>
+		<parameter name="DeviceName" value="emulator-5556"/>
+		<parameter name="platformName" value="Android"/>
+		<parameter name="platformVersion" value="4.4.2"/>
+		<parameter name="appPackage" value="app.kwc.math.totalcalc"/>
+		<parameter name="appActivity" value=".TotalCalculator"/>
+			<classes>
+				<class name="com.automation.mobile.TestCases.Verify_Addition"/>
+			</classes>
+	</test>
+</suite>
