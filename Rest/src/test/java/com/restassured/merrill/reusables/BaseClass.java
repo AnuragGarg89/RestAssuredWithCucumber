@@ -5,9 +5,13 @@ import static io.restassured.RestAssured.given;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
 
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -25,15 +29,32 @@ public class BaseClass {
 	public static Properties data;
 	public static FileInputStream fis;
 	public static File f;
-	public ExtentReports report;
+	public static ExtentReports report;
 	public ExtentTest logger;
+	public static WebDriver driver;
+	public static String reportPath;
+	public static String projectPath;
+	public static String filename;
+	
+	static {
+		
+		filename = new SimpleDateFormat("dd-MM-yyyyhh:mm:ss").format(new Date());
+		System.out.println(filename);
+		projectPath = System.getProperty("user.dir");
+		System.out.println(projectPath);
+		//reportPath = projectPath+"\\Output\\ExtentReports\\MerrillTesting"+"\\"+filename+".html";
+		reportPath = projectPath+"\\Output\\ExtentReports\\MerrillTesting.html";
+		System.out.println(reportPath);
+		//System.setProperty("webdriver.gecko.driver", projectPath+"\\geckodriver.exe");	
+		System.setProperty("webdriver.chrome.driver", projectPath+"\\chromedriver.exe");	
+		report = new ExtentReports(reportPath, false);;
+	}
 	
 	
 	public static void LoadConfigPropFile() throws IOException {
-		//System.out.println("inside before");	
-		String userpath = System.getProperty("user.dir");
-		//System.out.println(userpath);
-		f = new File(userpath + "\\src\\test\\java\\com\\restassured\\merrill\\config\\config.properties");
+		//System.out.println("inside before");		
+		//System.out.println(projectPath);
+		f = new File(projectPath + "\\src\\test\\java\\com\\restassured\\merrill\\config\\config.properties");
 		fis = new FileInputStream(f);
 		config = new Properties();
 		config.load(fis);
@@ -43,9 +64,8 @@ public class BaseClass {
 
 	public static void LoadDataPropFile() throws IOException {
 		//System.out.println("inside before");	
-		String userpath = System.getProperty("user.dir");
-		//System.out.println(userpath);
-		f = new File(userpath + "\\src\\test\\java\\com\\restassured\\merrill\\config\\Data.properties");
+		//System.out.println(projectPath);
+		f = new File(projectPath + "\\src\\test\\java\\com\\restassured\\merrill\\config\\Data.properties");
 		fis = new FileInputStream(f);
 		data = new Properties();
 		data.load(fis);
@@ -79,4 +99,5 @@ public class BaseClass {
 
 		return map;
 	}
+	
 }
