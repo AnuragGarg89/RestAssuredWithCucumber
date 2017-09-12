@@ -1,3 +1,4 @@
+@Api
 Feature: Merrill Api's
   
  Scenario: Test Manual processing Download Api

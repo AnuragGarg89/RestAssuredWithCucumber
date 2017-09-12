@@ -4,15 +4,20 @@ import static io.restassured.RestAssured.given;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
+
 import org.openqa.selenium.WebDriver;
 
+import io.restassured.RestAssured;
+import io.restassured.config.LogConfig;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -21,54 +26,81 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.restassured.merrill.reusables.Convert;
 
+
 public class BaseClass {
 	
 	public RequestSpecification request;
 	public Response response;
+	public ExtentTest logger;
+	
 	public static Properties config;
 	public static Properties data;
-	public static FileInputStream fis;
 	public static File f;
 	public static ExtentReports report;
-	public ExtentTest logger;
 	public static WebDriver driver;
 	public static String reportPath;
 	public static String projectPath;
 	public static String filename;
+	public static FileInputStream fis;
+	public static FileOutputStream fileOutPutStream;
+	public static PrintStream printStream;
+	public static String logPath;
 	
-	static {
+	
+	static {	
 		
-		filename = new SimpleDateFormat("dd-MM-yyyyhh:mm:ss").format(new Date());
-		System.out.println(filename);
-		projectPath = System.getProperty("user.dir");
-		System.out.println(projectPath);
-		//reportPath = projectPath+"\\Output\\ExtentReports\\MerrillTesting"+"\\"+filename+".html";
-		reportPath = projectPath+"\\Output\\ExtentReports\\MerrillTesting.html";
-		System.out.println(reportPath);
-		//System.setProperty("webdriver.gecko.driver", projectPath+"\\geckodriver.exe");	
-		System.setProperty("webdriver.chrome.driver", projectPath+"\\chromedriver.exe");	
-		report = new ExtentReports(reportPath, false);;
-	}
+		try {
+			
+			projectPath = System.getProperty("user.dir");
+			logPath = projectPath+"\\log\\application.log";
+			
+			f = new File(logPath);
+			fileOutPutStream = new FileOutputStream(f);
+			printStream = new PrintStream(fileOutPutStream);
+			
+			RestAssured.config = RestAssured.config().logConfig(new LogConfig().defaultStream(printStream));
+			filename = new SimpleDateFormat("ddMMyyyy-hhmmss").format(new Date());
+			
+			reportPath = projectPath + "\\Output\\ExtentReports\\MerrillTesting" + filename + ".html";
+
+			// System.setProperty("webdriver.gecko.driver",projectPath+"\\geckodriver.exe");
+			System.setProperty("webdriver.chrome.driver", projectPath + "\\chromedriver.exe");
+			report = new ExtentReports(reportPath, true);
+
+		} catch (Throwable e) {
+			e.printStackTrace();
+		}
 	
+	}	
 	
 	public static void LoadConfigPropFile() throws IOException {
-		//System.out.println("inside before");		
-		//System.out.println(projectPath);
+		try{
 		f = new File(projectPath + "\\src\\test\\java\\com\\restassured\\merrill\\config\\config.properties");
 		fis = new FileInputStream(f);
 		config = new Properties();
 		config.load(fis);
-		
+		}
+		catch(Throwable e){
+			e.printStackTrace();
+		}
+		finally{
+			fis.close();
+		}
 	}
 	
-
 	public static void LoadDataPropFile() throws IOException {
-		//System.out.println("inside before");	
-		//System.out.println(projectPath);
-		f = new File(projectPath + "\\src\\test\\java\\com\\restassured\\merrill\\config\\Data.properties");
-		fis = new FileInputStream(f);
-		data = new Properties();
-		data.load(fis);
+		
+		try {
+			f = new File(projectPath + "\\src\\test\\java\\com\\restassured\\merrill\\config\\Data.properties");
+			fis = new FileInputStream(f);
+			data = new Properties();
+			data.load(fis);
+		} catch (Throwable e) {
+			e.printStackTrace();
+		}
+		finally{
+			fis.close();
+		}
 		
 	}
 	
@@ -100,4 +132,5 @@ public class BaseClass {
 		return map;
 	}
 	
+
 }

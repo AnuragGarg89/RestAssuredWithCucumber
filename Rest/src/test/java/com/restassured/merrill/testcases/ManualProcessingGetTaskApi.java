@@ -8,7 +8,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.junit.Assert;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.relevantcodes.extentreports.LogStatus;
 import com.restassured.merrill.reusables.BaseClass;
@@ -22,6 +21,8 @@ import io.restassured.path.json.JsonPath;
 public class ManualProcessingGetTaskApi extends BaseClass {
 
 	public String END_POINT_GET_TASKS = "/api/manualdoc/tasks";
+	
+	
 
 	public static Map<String, String> setQueryParam() throws IOException {
 
@@ -39,14 +40,18 @@ public class ManualProcessingGetTaskApi extends BaseClass {
 	public void user_has_filter_field() throws Throwable {
 		LoadConfigPropFile();
 
-		logger = report.startTest("TESTING GET TASK API");
+		logger = report.startTest("loggerING GET TASK API");
 
 		logger.log(LogStatus.INFO, "SETTING HEADERS AND QUERY PARAMETERS");
 
 		baseURI = config.getProperty("HOST");
 		request = given().queryParams(setQueryParam()).headers(BaseClass.setHeaders());
-
-		logger.log(LogStatus.INFO, "REQUEST LOGS: " + request.log().all());
+		printStream.println("####################### Printing Request Logs for ManualProcessingGetTaskApi #######################");
+		request.log().all();
+		printStream.println();
+		
+		logger.log(LogStatus.INFO, "CHECK LOG FOLDER FOR REQUEST LOGS");
+		
 	}
 
 	@When("^user hits the getTask api$")
@@ -70,11 +75,14 @@ public class ManualProcessingGetTaskApi extends BaseClass {
 
 		Assert.assertTrue(totalNumberOfRecords > 0);
 		response.then().assertThat().statusCode(statuscode);
-
-		// logger.log(LogStatus.INFO, "RESPONSE LOGS: "+response.then().log().all());
-
+		printStream.println("####################### Printing Response Logs for ManualProcessingGetTaskApi #######################");
+		response.then().log().all();
+		printStream.println();
+		
+		logger.log(LogStatus.INFO, "CHECK LOG FOLDER FOR RESPONSE LOGS");
+		
 		logger.log(LogStatus.PASS, "GET TASK API UP AND RUNNING");
-		logger.log(LogStatus.INFO, "END TEST");
+		logger.log(LogStatus.INFO, "END logger");
 		
 				
 	}

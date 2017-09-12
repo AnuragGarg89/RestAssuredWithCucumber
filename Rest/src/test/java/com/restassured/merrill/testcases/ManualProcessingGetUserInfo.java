@@ -9,16 +9,15 @@ import cucumber.api.java.en.When;
 
 import static io.restassured.RestAssured.*;
 
-import org.openqa.selenium.chrome.ChromeDriver;
-
 public class ManualProcessingGetUserInfo extends BaseClass {
 
 	public String END_POINT_USERINFO = "/api/manualdoc/userInfo";
+	
 
 	@Given("^user has JWT Token$")
 	public void user_has_a_JWT_Token() throws Throwable {
 
-		logger = report.startTest("TESTING GET USER INFO API");
+		logger = report.startTest("loggerING GET USER INFO API");
 		logger.log(LogStatus.INFO, "SETTING HEADERS");
 
 		LoadConfigPropFile();
@@ -26,8 +25,12 @@ public class ManualProcessingGetUserInfo extends BaseClass {
 
 		baseURI = config.getProperty("HOST");
 		request = given().headers(BaseClass.setHeaders());
-
-		logger.log(LogStatus.INFO, "REQUEST LOGS: " + request.log().all());
+		printStream.println("####################### Printing Request Logs for ManualProcessingGetUserInfo #######################");
+		request.log().all();
+		printStream.println();
+		
+		logger.log(LogStatus.INFO, "CHECK LOG FOLDER FOR REQUEST LOGS");
+	
 	}
 
 	@When("^user hits the getUserInfo api$")
@@ -43,18 +46,18 @@ public class ManualProcessingGetUserInfo extends BaseClass {
 	public void check_response_code_is(int statuscode) throws Throwable {
 
 		response.then().assertThat().statusCode(statuscode);
-
-		logger.log(LogStatus.INFO, "RESPONSE LOGS: " + response.then().log().all());
+		
+		printStream.println("####################### Printing Response Logs for ManualProcessingGetUserInfo #######################");
+		response.then().log().all();
+		printStream.println();
+		
+		logger.log(LogStatus.INFO, "CHECK LOG FOLDER FOR RESPONSE LOGS");
+		
 		logger.log(LogStatus.PASS, "GET USER INFO API IS UP AND RUNNING");
-		logger.log(LogStatus.INFO, "END TEST");
-		driver = new ChromeDriver();
+		logger.log(LogStatus.INFO, "END logger");
 		
-		driver.get(reportPath);		
-		report.endTest(logger);
-		report.flush();
 		
-		//driver.close();
 	}
-
+	
 	
 }
