@@ -1,4 +1,5 @@
-####################### Printing Request Logs for ManualProcessingDownload #######################
+
+####################### Printing Request Logs for Download API #######################
 
 Request method:	GET
 Request URI:	https://doc-conversion.apps.us2.dev.foundry.mrll.com/api/manualdoc/3827/download
@@ -7,24 +8,26 @@ Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	uniqueTaskId=3827
-Headers:		Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1OTZlNGQ3OTU5ZGYyYjAwMTBjYzBiYTUiLCJleHAiOjE1MDUyNzk0MjMsInNlc3Npb25JZCI6bnVsbCwicHJvamVjdElkIjpudWxsLCJjb250ZW50QWNjZXNzR3JvdXBJZCI6IiIsImNvbnRlbnRBY2Nlc3NHcm91cE5hbWUiOiIiLCJmZWF0dXJlQWNjZXNzR3JvdXBJZCI6IiIsInRlYW1JZCI6bnVsbCwidGVhbU5hbWUiOm51bGwsImdsb2JhbEFjY2Vzc0dyb3VwSWQiOiI1OWI2ZWFkNDg2ZTYyOGEwODUwYjhhZGQiLCJhdXRob3JpdGllcyI6WyJQUk9KRUNUX1VTRVJfVklFVyIsIlBST0pFQ1RfQ09OVEVOVF9ET1dOTE9BRF9CVUxLIiwiUFJPSkVDVF9VUERBVEUiLCJVU0VSX0ZBVk9SSVRFX0NBVEVHT1JZX1ZJRVciLCJQTEFURk9STV9TRU5EX0VNQUlMIiwiVVNFUl9GQVZPUklURV9DQVRFR09SWV9ERUxFVEUiLCJQUk9KRUNUX0NPTlRFTlRfUkVQTEFDRSIsIlBST0pFQ1RfQ09OVEVOVF9ET1dOTE9BRCIsIlBST0pFQ1RfU0VUVElOR1NfVVBEQVRFIiwiUFJPSkVDVF9GUEdfTUFOQUdFIiwiVVNFUl9GQVZPUklURV9DQVRFR09SWV9VUERBVEUiLCJJTlRFUk5BTFRPT0xfVVNFUklORk9fR0VUIiwiUFJPSkVDVF9DT05URU5UX1VQTE9BRCIsIlBST0pFQ1RfQ09OVEVOVF9QRVJNSVNTSU9OUyIsIlBST0pFQ1RfRlBHX1ZJRVciLCJQUk9KRUNUX0NQR19NQU5BR0UiLCJQUk9KRUNUX0ZJTEVST09NX0RFQUNUSVZBVEUiLCJQUk9KRUNUX0FDVElWQVRFIiwiUFJPSkVDVF9DT05URU5UX01PVkUiLCJQUk9KRUNUX0NBR19ERUxFVEUiLCJQUk9KRUNUX0RPQ1VNRU5UX1ZJRVciLCJQUk9KRUNUX1VTRVJfREVBQ1RJVkFURSIsIkRPQ1VNRU5UX1BST0NFU1NJTkdfRE9XTkxPQUQiLCJQUk9KRUNUX1BFUk1JU1NJT05fVklFVyIsIlBST0pFQ1RfVFJBU0hfVklFVyIsIkNSRUFURV9JTlZJVEFUSU9OIiwiUFJPSkVDVF9DQUdfRURJVCIsIlBST0pFQ1RfQ1JFQVRFIiwiRE9DVU1FTlRfUFJPQ0VTU0lOR19BU1NJR04iLCJET0NVTUVOVF9QUk9DRVNTSU5HX1JFUVVFVUUiLCJQUk9KRUNUX1VTRVJfQ0FHX0NIQU5HRSIsIkRPQ1VNRU5UX1BST0NFU1NJTkdfVVBMT0FEIiwiUFJPSkVDVF9NQU5HX1ZJRVciLCJQUk9KRUNUX0ZBVk9SSVRFX1ZJRVciLCJQUk9KRUNUX0NBR19DUkVBVEUiLCJQUk9KRUNUX0ZJTEVST09NX0FERCIsIkRPQ1VNRU5UX1BST0NFU1NJTkdfU0VORFRPTUFOVUFMIiwiUFJPSkVDVF9XQVRFUk1BUktfRU5BQkxFIiwiUFJPSkVDVF9DT05URU5UX1VQREFURSIsIlBST0pFQ1RfQ0FHX1ZJRVciLCJET0NVTUVOVF9QUk9DRVNTSU5HX1VOQVNTSUdOIiwiUFJPSkVDVF9VU0VSX0lOVklURSIsIkRPQ1VNRU5UX1BST0NFU1NJTkdfTElTVCIsIkRPQ1VNRU5UX1BST0NFU1NJTkdfUkVKRUNUIiwiUFJPSkVDVF9DT05URU5UX1NFQVJDSCIsIlBST0pFQ1RfVVNFUl9BQ1RJVkFURSIsIlBST0pFQ1RfQ09OVEVOVF9QRVJNQU5FTlRfREVMRVRFIiwiUFJPSkVDVF9ERUFDVElWQVRFIiwiUFJPSkVDVF9DT05URU5UX1JFTkFNRSIsIkRFTEVURV9JTlZJVEFUSU9OIiwiUFJPSkVDVF9QUk9DRVNTSU5HUVVFVUVfVklFVyIsIlBST0pFQ1RfVVNFUl9GQUdfQ0hBTkdFIiwiVVNFUl9GQVZPUklURV9DQVRFR09SWV9DUkVBVEUiLCJQUk9KRUNUX0NPTlRFTlRfREVMRVRFIiwiUFJPSkVDVF9DT05URU5UX0NPUFkiLCJQUk9KRUNUX05FV0ZJTEVTX1ZJRVciLCJQUk9KRUNUX0ZPTERFUl9BREQiLCJQUk9KRUNUX0ZJTEVST09NX0FDVElWQVRFIiwiR0xPQkFMX1BST0pFQ1RfQUNDRVNTIiwiUFJPSkVDVF9SRVBPUlRTX1ZJRVciXSwiZmlyc3ROYW1lIjoiZHVtbXkiLCJsYXN0TmFtZSI6Im9uZSIsImNvbXBhbnkiOiJNZXJyaWxsIENvcnBvcmF0aW9uIiwidXNlclR5cGUiOiIiLCJwbGF0Zm9ybVVzZXJUeXBlIjoidGVjaF9zZXJ2aWNlIiwicHJvamVjdFVzZXJUeXBlIjpudWxsLCJjbGFpbXNUeXBlIjoiTUVSUklMTF9VU0VSIiwibWVycmlsbFVzZXIiOnRydWUsInVzZXJfbmFtZSI6ImR1bW15b25lQG1lcnJpbGxjb3JwLmNvbSJ9.NOD14_LuznRVi4b4gHVUSnz0nv58yflMK2R-yzn8N90
+Headers:		Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1OTZlNGQ3OTU5ZGYyYjAwMTBjYzBiYTUiLCJleHAiOjE1MDUzODI3MDgsInNlc3Npb25JZCI6bnVsbCwicHJvamVjdElkIjpudWxsLCJjb250ZW50QWNjZXNzR3JvdXBJZCI6IiIsImNvbnRlbnRBY2Nlc3NHcm91cE5hbWUiOiIiLCJmZWF0dXJlQWNjZXNzR3JvdXBJZCI6IiIsInRlYW1JZCI6bnVsbCwidGVhbU5hbWUiOm51bGwsImdsb2JhbEFjY2Vzc0dyb3VwSWQiOiI1OWI4M2M0ZjExYmZlNzVmZmY5N2YxZWEiLCJhdXRob3JpdGllcyI6WyJQUk9KRUNUX1VTRVJfVklFVyIsIlBST0pFQ1RfQ09OVEVOVF9ET1dOTE9BRF9CVUxLIiwiUFJPSkVDVF9VUERBVEUiLCJVU0VSX0ZBVk9SSVRFX0NBVEVHT1JZX1ZJRVciLCJQTEFURk9STV9TRU5EX0VNQUlMIiwiVVNFUl9GQVZPUklURV9DQVRFR09SWV9ERUxFVEUiLCJQUk9KRUNUX0NPTlRFTlRfUkVQTEFDRSIsIlBST0pFQ1RfQ09OVEVOVF9ET1dOTE9BRCIsIlBST0pFQ1RfU0VUVElOR1NfVVBEQVRFIiwiUFJPSkVDVF9GUEdfTUFOQUdFIiwiVVNFUl9GQVZPUklURV9DQVRFR09SWV9VUERBVEUiLCJQUk9KRUNUX01BTkFHRV9VU0VSUyIsIklOVEVSTkFMVE9PTF9VU0VSSU5GT19HRVQiLCJQUk9KRUNUX0NPTlRFTlRfVVBMT0FEIiwiUFJPSkVDVF9DT05URU5UX1BFUk1JU1NJT05TIiwiUFJPSkVDVF9GUEdfVklFVyIsIlBST0pFQ1RfQ1BHX01BTkFHRSIsIlBST0pFQ1RfRklMRVJPT01fREVBQ1RJVkFURSIsIlBST0pFQ1RfQUNUSVZBVEUiLCJQUk9KRUNUX0NPTlRFTlRfTU9WRSIsIlBST0pFQ1RfQ0FHX0RFTEVURSIsIlBST0pFQ1RfRE9DVU1FTlRfVklFVyIsIlBST0pFQ1RfVVNFUl9ERUFDVElWQVRFIiwiRE9DVU1FTlRfUFJPQ0VTU0lOR19ET1dOTE9BRCIsIlBST0pFQ1RfUEVSTUlTU0lPTl9WSUVXIiwiUFJPSkVDVF9UUkFTSF9WSUVXIiwiQ1JFQVRFX0lOVklUQVRJT04iLCJQUk9KRUNUX0NBR19FRElUIiwiUFJPSkVDVF9DUkVBVEUiLCJET0NVTUVOVF9QUk9DRVNTSU5HX0FTU0lHTiIsIkRPQ1VNRU5UX1BST0NFU1NJTkdfUkVRVUVVRSIsIlBST0pFQ1RfVVNFUl9DQUdfQ0hBTkdFIiwiRE9DVU1FTlRfUFJPQ0VTU0lOR19VUExPQUQiLCJQUk9KRUNUX01BTkdfVklFVyIsIlBST0pFQ1RfRkFWT1JJVEVfVklFVyIsIlBST0pFQ1RfQ0FHX0NSRUFURSIsIlBST0pFQ1RfRklMRVJPT01fQUREIiwiRE9DVU1FTlRfUFJPQ0VTU0lOR19TRU5EVE9NQU5VQUwiLCJQUk9KRUNUX1dBVEVSTUFSS19FTkFCTEUiLCJQUk9KRUNUX0NPTlRFTlRfVVBEQVRFIiwiUFJPSkVDVF9DQUdfVklFVyIsIkRPQ1VNRU5UX1BST0NFU1NJTkdfVU5BU1NJR04iLCJQUk9KRUNUX1VTRVJfSU5WSVRFIiwiRE9DVU1FTlRfUFJPQ0VTU0lOR19MSVNUIiwiRE9DVU1FTlRfUFJPQ0VTU0lOR19SRUpFQ1QiLCJQUk9KRUNUX0NPTlRFTlRfU0VBUkNIIiwiUFJPSkVDVF9VU0VSX0FDVElWQVRFIiwiUFJPSkVDVF9DT05URU5UX1BFUk1BTkVOVF9ERUxFVEUiLCJQUk9KRUNUX0RFQUNUSVZBVEUiLCJQUk9KRUNUX0NPTlRFTlRfUkVOQU1FIiwiREVMRVRFX0lOVklUQVRJT04iLCJQUk9KRUNUX1BST0NFU1NJTkdRVUVVRV9WSUVXIiwiUFJPSkVDVF9VU0VSX0ZBR19DSEFOR0UiLCJVU0VSX0ZBVk9SSVRFX0NBVEVHT1JZX0NSRUFURSIsIlBST0pFQ1RfQ09OVEVOVF9ERUxFVEUiLCJQUk9KRUNUX0NPTlRFTlRfQ09QWSIsIlBST0pFQ1RfTkVXRklMRVNfVklFVyIsIlBST0pFQ1RfRk9MREVSX0FERCIsIlBST0pFQ1RfRklMRVJPT01fQUNUSVZBVEUiLCJHTE9CQUxfUFJPSkVDVF9BQ0NFU1MiLCJQUk9KRUNUX1JFUE9SVFNfVklFVyJdLCJmaXJzdE5hbWUiOiJkdW1teSIsImxhc3ROYW1lIjoib25lIiwiY29tcGFueSI6Ik1lcnJpbGwgQ29ycG9yYXRpb24iLCJ1c2VyVHlwZSI6IiIsInBsYXRmb3JtVXNlclR5cGUiOiJ0ZWNoX3NlcnZpY2UiLCJwcm9qZWN0VXNlclR5cGUiOm51bGwsImNsYWltc1R5cGUiOiJNRVJSSUxMX1VTRVIiLCJtZXJyaWxsVXNlciI6dHJ1ZSwidXNlcl9uYW1lIjoiZHVtbXlvbmVAbWVycmlsbGNvcnAuY29tIn0.2bL8dVJOe8OW_VFf_JVRsnjp6BPFwAyLskEw0Nd_wZM
 				Accept=application/json
 				Content-Type=application/json; charset=UTF-8
 Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
-####################### Printing Response Logs for ManualProcessingDownload #######################
+
+####################### Printing Response Logs for Download API #######################
+
 HTTP/1.1 200 OK
 Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 Content-Type: application/json;charset=UTF-8
-Date: Tue, 12 Sep 2017 05:10:26 GMT
+Date: Wed, 13 Sep 2017 09:51:51 GMT
 Expires: 0
 Pragma: no-cache
 Strict-Transport-Security: max-age=31536000 ; includeSubDomains
-X-Application-Context: doc-conversion:cloud:2
+X-Application-Context: doc-conversion:cloud:3
 X-Content-Type-Options: nosniff
 X-Frame-Options: DENY
-X-Vcap-Request-Id: 310fed28-f22c-4ba3-483e-9efa6f0c0c73
+X-Vcap-Request-Id: 9ce41dbf-5e5f-4b1d-63b1-3c57aac157c3
 X-Xss-Protection: 1; mode=block
 Content-Length: 85
 
@@ -35,407 +38,7 @@ Content-Length: 85
     "size": 0
 }
 
-####################### Printing Request Logs for ManualProcessingGetTaskApi #######################
-
-Request method:	GET
-Request URI:	https://doc-conversion.apps.us2.dev.foundry.mrll.com/api/manualdoc/tasks?params%5B0%5D.filterField=projectName&params%5B1%5D.filterField=uploadedBy&params%5B0%5D.filterValue=MDP_Test_Project&params%5B1%5D.filterValue=Abhishek%20Singh
-Proxy:			<none>
-Request params:	<none>
-Query params:	params[0].filterField=projectName
-				params[1].filterField=uploadedBy
-				params[0].filterValue=MDP_Test_Project
-				params[1].filterValue=Abhishek Singh
-Form params:	<none>
-Path params:	<none>
-Headers:		Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1OTZlNGQ3OTU5ZGYyYjAwMTBjYzBiYTUiLCJleHAiOjE1MDUyNzk0MjcsInNlc3Npb25JZCI6bnVsbCwicHJvamVjdElkIjpudWxsLCJjb250ZW50QWNjZXNzR3JvdXBJZCI6IiIsImNvbnRlbnRBY2Nlc3NHcm91cE5hbWUiOiIiLCJmZWF0dXJlQWNjZXNzR3JvdXBJZCI6IiIsInRlYW1JZCI6bnVsbCwidGVhbU5hbWUiOm51bGwsImdsb2JhbEFjY2Vzc0dyb3VwSWQiOiI1OWI2ZWFkNDg2ZTYyOGEwODUwYjhhZGQiLCJhdXRob3JpdGllcyI6WyJQUk9KRUNUX1VTRVJfVklFVyIsIlBST0pFQ1RfQ09OVEVOVF9ET1dOTE9BRF9CVUxLIiwiUFJPSkVDVF9VUERBVEUiLCJVU0VSX0ZBVk9SSVRFX0NBVEVHT1JZX1ZJRVciLCJQTEFURk9STV9TRU5EX0VNQUlMIiwiVVNFUl9GQVZPUklURV9DQVRFR09SWV9ERUxFVEUiLCJQUk9KRUNUX0NPTlRFTlRfUkVQTEFDRSIsIlBST0pFQ1RfQ09OVEVOVF9ET1dOTE9BRCIsIlBST0pFQ1RfU0VUVElOR1NfVVBEQVRFIiwiUFJPSkVDVF9GUEdfTUFOQUdFIiwiVVNFUl9GQVZPUklURV9DQVRFR09SWV9VUERBVEUiLCJJTlRFUk5BTFRPT0xfVVNFUklORk9fR0VUIiwiUFJPSkVDVF9DT05URU5UX1VQTE9BRCIsIlBST0pFQ1RfQ09OVEVOVF9QRVJNSVNTSU9OUyIsIlBST0pFQ1RfRlBHX1ZJRVciLCJQUk9KRUNUX0NQR19NQU5BR0UiLCJQUk9KRUNUX0ZJTEVST09NX0RFQUNUSVZBVEUiLCJQUk9KRUNUX0FDVElWQVRFIiwiUFJPSkVDVF9DT05URU5UX01PVkUiLCJQUk9KRUNUX0NBR19ERUxFVEUiLCJQUk9KRUNUX0RPQ1VNRU5UX1ZJRVciLCJQUk9KRUNUX1VTRVJfREVBQ1RJVkFURSIsIkRPQ1VNRU5UX1BST0NFU1NJTkdfRE9XTkxPQUQiLCJQUk9KRUNUX1BFUk1JU1NJT05fVklFVyIsIlBST0pFQ1RfVFJBU0hfVklFVyIsIkNSRUFURV9JTlZJVEFUSU9OIiwiUFJPSkVDVF9DQUdfRURJVCIsIlBST0pFQ1RfQ1JFQVRFIiwiRE9DVU1FTlRfUFJPQ0VTU0lOR19BU1NJR04iLCJET0NVTUVOVF9QUk9DRVNTSU5HX1JFUVVFVUUiLCJQUk9KRUNUX1VTRVJfQ0FHX0NIQU5HRSIsIkRPQ1VNRU5UX1BST0NFU1NJTkdfVVBMT0FEIiwiUFJPSkVDVF9NQU5HX1ZJRVciLCJQUk9KRUNUX0ZBVk9SSVRFX1ZJRVciLCJQUk9KRUNUX0NBR19DUkVBVEUiLCJQUk9KRUNUX0ZJTEVST09NX0FERCIsIkRPQ1VNRU5UX1BST0NFU1NJTkdfU0VORFRPTUFOVUFMIiwiUFJPSkVDVF9XQVRFUk1BUktfRU5BQkxFIiwiUFJPSkVDVF9DT05URU5UX1VQREFURSIsIlBST0pFQ1RfQ0FHX1ZJRVciLCJET0NVTUVOVF9QUk9DRVNTSU5HX1VOQVNTSUdOIiwiUFJPSkVDVF9VU0VSX0lOVklURSIsIkRPQ1VNRU5UX1BST0NFU1NJTkdfTElTVCIsIkRPQ1VNRU5UX1BST0NFU1NJTkdfUkVKRUNUIiwiUFJPSkVDVF9DT05URU5UX1NFQVJDSCIsIlBST0pFQ1RfVVNFUl9BQ1RJVkFURSIsIlBST0pFQ1RfQ09OVEVOVF9QRVJNQU5FTlRfREVMRVRFIiwiUFJPSkVDVF9ERUFDVElWQVRFIiwiUFJPSkVDVF9DT05URU5UX1JFTkFNRSIsIkRFTEVURV9JTlZJVEFUSU9OIiwiUFJPSkVDVF9QUk9DRVNTSU5HUVVFVUVfVklFVyIsIlBST0pFQ1RfVVNFUl9GQUdfQ0hBTkdFIiwiVVNFUl9GQVZPUklURV9DQVRFR09SWV9DUkVBVEUiLCJQUk9KRUNUX0NPTlRFTlRfREVMRVRFIiwiUFJPSkVDVF9DT05URU5UX0NPUFkiLCJQUk9KRUNUX05FV0ZJTEVTX1ZJRVciLCJQUk9KRUNUX0ZPTERFUl9BREQiLCJQUk9KRUNUX0ZJTEVST09NX0FDVElWQVRFIiwiR0xPQkFMX1BST0pFQ1RfQUNDRVNTIiwiUFJPSkVDVF9SRVBPUlRTX1ZJRVciXSwiZmlyc3ROYW1lIjoiZHVtbXkiLCJsYXN0TmFtZSI6Im9uZSIsImNvbXBhbnkiOiJNZXJyaWxsIENvcnBvcmF0aW9uIiwidXNlclR5cGUiOiIiLCJwbGF0Zm9ybVVzZXJUeXBlIjoidGVjaF9zZXJ2aWNlIiwicHJvamVjdFVzZXJUeXBlIjpudWxsLCJjbGFpbXNUeXBlIjoiTUVSUklMTF9VU0VSIiwibWVycmlsbFVzZXIiOnRydWUsInVzZXJfbmFtZSI6ImR1bW15b25lQG1lcnJpbGxjb3JwLmNvbSJ9.yaHPT_AIoXAqAaVlbSGpzPRl4lnJGZH5kl6QZIwvQSQ
-				Accept=application/json
-				Content-Type=application/json; charset=UTF-8
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-####################### Printing Response Logs for ManualProcessingGetTaskApi #######################
-HTTP/1.1 200 OK
-Cache-Control: no-cache, no-store, max-age=0, must-revalidate
-Content-Type: application/json;charset=UTF-8
-Date: Tue, 12 Sep 2017 05:10:29 GMT
-Expires: 0
-Pragma: no-cache
-Strict-Transport-Security: max-age=31536000 ; includeSubDomains
-X-Application-Context: doc-conversion:cloud:3
-X-Content-Type-Options: nosniff
-X-Frame-Options: DENY
-X-Vcap-Request-Id: f8f7156e-3334-43d6-4519-b7de714002e5
-X-Xss-Protection: 1; mode=block
-Transfer-Encoding: chunked
-
-{
-    "totalRecords": 4878,
-    "data": [
-        {
-            "id": "59228d8117eac315d8c06400",
-            "metadataId": "58d3655f36d5bb000eb33507",
-            "projectId": "58d0cd569c4486000e2ba8da",
-            "retryCount": 0,
-            "taskId": "3928",
-            "message": "unsupported file format",
-            "assignedLastName": null,
-            "assignedFirstName": "Unassigned",
-            "virtualMachine": "N/A",
-            "lastAction": "1st Processing Failed",
-            "region": "N/A",
-            "projectName": "MDP_Test_Project",
-            "sourceFileId": "0de8a0cd-d66e-4889-861c-833c2d53a60b",
-            "documentName": "DontDeleteRejectTest.txt",
-            "fileExtension": "txt",
-            "index": "0.26",
-            "fileRoom": null,
-            "sourceSizeBytes": 230,
-            "processedById": null,
-            "processedByFirstName": null,
-            "processedByLastName": null,
-            "uploadedById": "76c982ba-b58e-4d48-964b-eccb73fd2b7c",
-            "uploadedByFirstName": "Abhishek",
-            "uploadedByLastName": "Singh",
-            "assignedServer": "us2idsaem607",
-            "totalProcessingTime": "4156 Hr 36 Min",
-            "manualProccessingTime": "956 Hr 8 Min",
-            "reasonType": "N/A",
-            "fileSizeInMB": "0.00 MB",
-            "manualProcessingUserId": null,
-            "problemType": "File format not supported",
-            "retryInstructions": null,
-            "totalProcTimeCode": "TC003",
-            "totalManualTimeCode": "TC003"
-        },
-        {
-            "id": "5923e4e817eac31f88cd0ddb",
-            "metadataId": "58d3655f36d5bb000eb33507",
-            "projectId": "58d0cd569c4486000e2ba8da",
-            "retryCount": 0,
-            "taskId": "3984",
-            "message": "unsupported file format",
-            "assignedLastName": "Dalla",
-            "assignedFirstName": "Sanju",
-            "virtualMachine": "N/A",
-            "lastAction": "2nd Processing Failed",
-            "region": "N/A",
-            "projectName": "MDP_Test_Project",
-            "sourceFileId": "0de8a0cd-d66e-4889-861c-833c2d53a60b",
-            "documentName": "DontDeleteRejectTest.txt",
-            "fileExtension": "txt",
-            "index": "0.26",
-            "fileRoom": null,
-            "sourceSizeBytes": 230,
-            "processedById": "dummy1",
-            "processedByFirstName": "dummy",
-            "processedByLastName": "one",
-            "uploadedById": "76c982ba-b58e-4d48-964b-eccb73fd2b7c",
-            "uploadedByFirstName": "Abhishek",
-            "uploadedByLastName": "Singh",
-            "assignedServer": "us2idsaem607",
-            "totalProcessingTime": "4156 Hr 36 Min",
-            "manualProccessingTime": "955 Hr 33 Min",
-            "reasonType": "N/A",
-            "fileSizeInMB": "0.00 MB",
-            "manualProcessingUserId": "5955e0238fcc490011bd3ab3",
-            "problemType": "File format not supported",
-            "retryInstructions": null,
-            "totalProcTimeCode": "TC003",
-            "totalManualTimeCode": "TC003"
-        },
-        {
-            "id": "5923e4fc17eac31f88cd0ddd",
-            "metadataId": "58d3655f36d5bb000eb33507",
-            "projectId": "58d0cd569c4486000e2ba8da",
-            "retryCount": 0,
-            "taskId": "3986",
-            "message": "unsupported file format",
-            "assignedLastName": "Singh",
-            "assignedFirstName": "garima",
-            "virtualMachine": "N/A",
-            "lastAction": "1st Processing Failed",
-            "region": "N/A",
-            "projectName": "MDP_Test_Project",
-            "sourceFileId": "0de8a0cd-d66e-4889-861c-833c2d53a60b",
-            "documentName": "DontDeleteRejectTest.txt",
-            "fileExtension": "txt",
-            "index": "0.26",
-            "fileRoom": null,
-            "sourceSizeBytes": 230,
-            "processedById": null,
-            "processedByFirstName": null,
-            "processedByLastName": null,
-            "uploadedById": "76c982ba-b58e-4d48-964b-eccb73fd2b7c",
-            "uploadedByFirstName": "Abhishek",
-            "uploadedByLastName": "Singh",
-            "assignedServer": "us2idsaem609",
-            "totalProcessingTime": "4156 Hr 36 Min",
-            "manualProccessingTime": "958 Hr 6 Min",
-            "reasonType": "N/A",
-            "fileSizeInMB": "0.00 MB",
-            "manualProcessingUserId": "b11a28d8-6bbc-4d74-96e9-b1732f47b93a",
-            "problemType": "File format not supported",
-            "retryInstructions": null,
-            "totalProcTimeCode": "TC003",
-            "totalManualTimeCode": "TC003"
-        },
-        {
-            "id": "5923e50117eac31f88cd0dde",
-            "metadataId": "58d3655f36d5bb000eb33507",
-            "projectId": "58d0cd569c4486000e2ba8da",
-            "retryCount": 0,
-            "taskId": "3987",
-            "message": "unsupported file format",
-            "assignedLastName": "Dalla",
-            "assignedFirstName": "Sanju",
-            "virtualMachine": "N/A",
-            "lastAction": "1st Processing Failed",
-            "region": "N/A",
-            "projectName": "MDP_Test_Project",
-            "sourceFileId": "0de8a0cd-d66e-4889-861c-833c2d53a60b",
-            "documentName": "DontDeleteRejectTest.txt",
-            "fileExtension": "txt",
-            "index": "0.26",
-            "fileRoom": null,
-            "sourceSizeBytes": 230,
-            "processedById": null,
-            "processedByFirstName": null,
-            "processedByLastName": null,
-            "uploadedById": "76c982ba-b58e-4d48-964b-eccb73fd2b7c",
-            "uploadedByFirstName": "Abhishek",
-            "uploadedByLastName": "Singh",
-            "assignedServer": "us2idsaem609",
-            "totalProcessingTime": "4156 Hr 36 Min",
-            "manualProccessingTime": "958 Hr 6 Min",
-            "reasonType": "N/A",
-            "fileSizeInMB": "0.00 MB",
-            "manualProcessingUserId": "5955e0238fcc490011bd3ab3",
-            "problemType": "File format not supported",
-            "retryInstructions": null,
-            "totalProcTimeCode": "TC003",
-            "totalManualTimeCode": "TC003"
-        },
-        {
-            "id": "5923e7a317eac31f88cd0de9",
-            "metadataId": "58d3655f36d5bb000eb33507",
-            "projectId": "58d0cd569c4486000e2ba8da",
-            "retryCount": 0,
-            "taskId": "3991",
-            "message": "unsupported file format",
-            "assignedLastName": "Dalla",
-            "assignedFirstName": "Sanju",
-            "virtualMachine": "N/A",
-            "lastAction": "1st Processing Failed",
-            "region": "N/A",
-            "projectName": "MDP_Test_Project",
-            "sourceFileId": "0de8a0cd-d66e-4889-861c-833c2d53a60b",
-            "documentName": "TODO",
-            "fileExtension": "txt",
-            "index": "0.26",
-            "fileRoom": null,
-            "sourceSizeBytes": 230,
-            "processedById": null,
-            "processedByFirstName": null,
-            "processedByLastName": null,
-            "uploadedById": "76c982ba-b58e-4d48-964b-eccb73fd2b7c",
-            "uploadedByFirstName": "Abhishek",
-            "uploadedByLastName": "Singh",
-            "assignedServer": "us2idsaem609",
-            "totalProcessingTime": "4156 Hr 36 Min",
-            "manualProccessingTime": "958 Hr 6 Min",
-            "reasonType": "N/A",
-            "fileSizeInMB": "0.00 MB",
-            "manualProcessingUserId": "5955e0238fcc490011bd3ab3",
-            "problemType": "File format not supported",
-            "retryInstructions": null,
-            "totalProcTimeCode": "TC003",
-            "totalManualTimeCode": "TC003"
-        },
-        {
-            "id": "5923e7c017eac31f88cd0deb",
-            "metadataId": "58d3655f36d5bb000eb33507",
-            "projectId": "58d0cd569c4486000e2ba8da",
-            "retryCount": 0,
-            "taskId": "3993",
-            "message": "unsupported file format",
-            "assignedLastName": "Dalla",
-            "assignedFirstName": "Sanju",
-            "virtualMachine": "N/A",
-            "lastAction": "1st Processing Failed",
-            "region": "N/A",
-            "projectName": "MDP_Test_Project",
-            "sourceFileId": "0de8a0cd-d66e-4889-861c-833c2d53a60b",
-            "documentName": "DontDeleteRejectTest.txt",
-            "fileExtension": "txt",
-            "index": "0.26",
-            "fileRoom": null,
-            "sourceSizeBytes": 230,
-            "processedById": "dummy1",
-            "processedByFirstName": "dummy",
-            "processedByLastName": "one",
-            "uploadedById": "76c982ba-b58e-4d48-964b-eccb73fd2b7c",
-            "uploadedByFirstName": "Abhishek",
-            "uploadedByLastName": "Singh",
-            "assignedServer": "us2idsaem609",
-            "totalProcessingTime": "4156 Hr 36 Min",
-            "manualProccessingTime": "958 Hr 5 Min",
-            "reasonType": "N/A",
-            "fileSizeInMB": "0.00 MB",
-            "manualProcessingUserId": "5955e0238fcc490011bd3ab3",
-            "problemType": "File format not supported",
-            "retryInstructions": null,
-            "totalProcTimeCode": "TC003",
-            "totalManualTimeCode": "TC003"
-        },
-        {
-            "id": "5923e7cb17eac31f88cd0dec",
-            "metadataId": "58d3655f36d5bb000eb33507",
-            "projectId": "58d0cd569c4486000e2ba8da",
-            "retryCount": 0,
-            "taskId": "3994",
-            "message": "unsupported file format",
-            "assignedLastName": "Singh",
-            "assignedFirstName": "garima",
-            "virtualMachine": "N/A",
-            "lastAction": "1st Processing Failed",
-            "region": "N/A",
-            "projectName": "MDP_Test_Project",
-            "sourceFileId": "0de8a0cd-d66e-4889-861c-833c2d53a60b",
-            "documentName": "DontDeleteRejectTest.txt",
-            "fileExtension": "txt",
-            "index": "0.26",
-            "fileRoom": null,
-            "sourceSizeBytes": 230,
-            "processedById": null,
-            "processedByFirstName": null,
-            "processedByLastName": null,
-            "uploadedById": "76c982ba-b58e-4d48-964b-eccb73fd2b7c",
-            "uploadedByFirstName": "Abhishek",
-            "uploadedByLastName": "Singh",
-            "assignedServer": "us2idsaem609",
-            "totalProcessingTime": "4156 Hr 36 Min",
-            "manualProccessingTime": "958 Hr 5 Min",
-            "reasonType": "N/A",
-            "fileSizeInMB": "0.00 MB",
-            "manualProcessingUserId": "b11a28d8-6bbc-4d74-96e9-b1732f47b93a",
-            "problemType": "File format not supported",
-            "retryInstructions": null,
-            "totalProcTimeCode": "TC003",
-            "totalManualTimeCode": "TC003"
-        },
-        {
-            "id": "5923e7f817eac31f88cd0ded",
-            "metadataId": "58d3655f36d5bb000eb33507",
-            "projectId": "58d0cd569c4486000e2ba8da",
-            "retryCount": 0,
-            "taskId": "3995",
-            "message": "unsupported file format",
-            "assignedLastName": "Singh",
-            "assignedFirstName": "garima",
-            "virtualMachine": "N/A",
-            "lastAction": null,
-            "region": "N/A",
-            "projectName": "MDP_Test_Project",
-            "sourceFileId": "0de8a0cd-d66e-4889-861c-833c2d53a60b",
-            "documentName": "DontDeleteRejectTest.txt",
-            "fileExtension": "txt",
-            "index": "0.26",
-            "fileRoom": null,
-            "sourceSizeBytes": 230,
-            "processedById": null,
-            "processedByFirstName": null,
-            "processedByLastName": null,
-            "uploadedById": "76c982ba-b58e-4d48-964b-eccb73fd2b7c",
-            "uploadedByFirstName": "Abhishek",
-            "uploadedByLastName": "Singh",
-            "assignedServer": "us2idsaem608",
-            "totalProcessingTime": "4156 Hr 36 Min",
-            "manualProccessingTime": "2685 Hr 26 Min",
-            "reasonType": "N/A",
-            "fileSizeInMB": "0.00 MB",
-            "manualProcessingUserId": "b11a28d8-6bbc-4d74-96e9-b1732f47b93a",
-            "problemType": null,
-            "retryInstructions": null,
-            "totalProcTimeCode": "TC003",
-            "totalManualTimeCode": "TC003"
-        },
-        {
-            "id": "5923e7fe17eac31f88cd0dee",
-            "metadataId": "58d3655f36d5bb000eb33507",
-            "projectId": "58d0cd569c4486000e2ba8da",
-            "retryCount": 0,
-            "taskId": "3996",
-            "message": null,
-            "assignedLastName": "Singh",
-            "assignedFirstName": "garima",
-            "virtualMachine": "N/A",
-            "lastAction": null,
-            "region": "N/A",
-            "projectName": "MDP_Test_Project",
-            "sourceFileId": "0de8a0cd-d66e-4889-861c-833c2d53a60b",
-            "documentName": "DontDeleteRejectTest.txt",
-            "fileExtension": "txt",
-            "index": "0.26",
-            "fileRoom": null,
-            "sourceSizeBytes": 230,
-            "processedById": null,
-            "processedByFirstName": null,
-            "processedByLastName": null,
-            "uploadedById": "76c982ba-b58e-4d48-964b-eccb73fd2b7c",
-            "uploadedByFirstName": "Abhishek",
-            "uploadedByLastName": "Singh",
-            "assignedServer": "N/A",
-            "totalProcessingTime": "4156 Hr 36 Min",
-            "manualProccessingTime": "2690 Hr 57 Min",
-            "reasonType": "N/A",
-            "fileSizeInMB": "0.00 MB",
-            "manualProcessingUserId": "b11a28d8-6bbc-4d74-96e9-b1732f47b93a",
-            "problemType": null,
-            "retryInstructions": null,
-            "totalProcTimeCode": "TC003",
-            "totalManualTimeCode": "TC003"
-        },
-        {
-            "id": "5923ebd217eac3153451cdf3",
-            "metadataId": "58d3655f36d5bb000eb33507",
-            "projectId": "58d0cd569c4486000e2ba8da",
-            "retryCount": 0,
-            "taskId": "4000",
-            "message": null,
-            "assignedLastName": "Singh",
-            "assignedFirstName": "garima",
-            "virtualMachine": "N/A",
-            "lastAction": null,
-            "region": "N/A",
-            "projectName": "MDP_Test_Project",
-            "sourceFileId": "0de8a0cd-d66e-4889-861c-833c2d53a60b",
-            "documentName": "TODO",
-            "fileExtension": "txt",
-            "index": "0.26",
-            "fileRoom": null,
-            "sourceSizeBytes": 230,
-            "processedById": null,
-            "processedByFirstName": null,
-            "processedByLastName": null,
-            "uploadedById": "76c982ba-b58e-4d48-964b-eccb73fd2b7c",
-            "uploadedByFirstName": "Abhishek",
-            "uploadedByLastName": "Singh",
-            "assignedServer": "N/A",
-            "totalProcessingTime": "4156 Hr 36 Min",
-            "manualProccessingTime": "2690 Hr 41 Min",
-            "reasonType": "N/A",
-            "fileSizeInMB": "0.00 MB",
-            "manualProcessingUserId": "b11a28d8-6bbc-4d74-96e9-b1732f47b93a",
-            "problemType": null,
-            "retryInstructions": null,
-            "totalProcTimeCode": "TC003",
-            "totalManualTimeCode": "TC003"
-        }
-    ],
-    "message": null
-}
-
-####################### Printing Request Logs for ManualProcessingGetUserInfo #######################
+####################### Printing Request Logs for GetUserInfo API #######################
 
 Request method:	GET
 Request URI:	https://doc-conversion.apps.us2.dev.foundry.mrll.com/api/manualdoc/userInfo
@@ -444,24 +47,26 @@ Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	<none>
-Headers:		Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1OTZlNGQ3OTU5ZGYyYjAwMTBjYzBiYTUiLCJleHAiOjE1MDUyNzk0MzEsInNlc3Npb25JZCI6bnVsbCwicHJvamVjdElkIjpudWxsLCJjb250ZW50QWNjZXNzR3JvdXBJZCI6IiIsImNvbnRlbnRBY2Nlc3NHcm91cE5hbWUiOiIiLCJmZWF0dXJlQWNjZXNzR3JvdXBJZCI6IiIsInRlYW1JZCI6bnVsbCwidGVhbU5hbWUiOm51bGwsImdsb2JhbEFjY2Vzc0dyb3VwSWQiOiI1OWI2ZWFkNDg2ZTYyOGEwODUwYjhhZGQiLCJhdXRob3JpdGllcyI6WyJQUk9KRUNUX1VTRVJfVklFVyIsIlBST0pFQ1RfQ09OVEVOVF9ET1dOTE9BRF9CVUxLIiwiUFJPSkVDVF9VUERBVEUiLCJVU0VSX0ZBVk9SSVRFX0NBVEVHT1JZX1ZJRVciLCJQTEFURk9STV9TRU5EX0VNQUlMIiwiVVNFUl9GQVZPUklURV9DQVRFR09SWV9ERUxFVEUiLCJQUk9KRUNUX0NPTlRFTlRfUkVQTEFDRSIsIlBST0pFQ1RfQ09OVEVOVF9ET1dOTE9BRCIsIlBST0pFQ1RfU0VUVElOR1NfVVBEQVRFIiwiUFJPSkVDVF9GUEdfTUFOQUdFIiwiVVNFUl9GQVZPUklURV9DQVRFR09SWV9VUERBVEUiLCJJTlRFUk5BTFRPT0xfVVNFUklORk9fR0VUIiwiUFJPSkVDVF9DT05URU5UX1VQTE9BRCIsIlBST0pFQ1RfQ09OVEVOVF9QRVJNSVNTSU9OUyIsIlBST0pFQ1RfRlBHX1ZJRVciLCJQUk9KRUNUX0NQR19NQU5BR0UiLCJQUk9KRUNUX0ZJTEVST09NX0RFQUNUSVZBVEUiLCJQUk9KRUNUX0FDVElWQVRFIiwiUFJPSkVDVF9DT05URU5UX01PVkUiLCJQUk9KRUNUX0NBR19ERUxFVEUiLCJQUk9KRUNUX0RPQ1VNRU5UX1ZJRVciLCJQUk9KRUNUX1VTRVJfREVBQ1RJVkFURSIsIkRPQ1VNRU5UX1BST0NFU1NJTkdfRE9XTkxPQUQiLCJQUk9KRUNUX1BFUk1JU1NJT05fVklFVyIsIlBST0pFQ1RfVFJBU0hfVklFVyIsIkNSRUFURV9JTlZJVEFUSU9OIiwiUFJPSkVDVF9DQUdfRURJVCIsIlBST0pFQ1RfQ1JFQVRFIiwiRE9DVU1FTlRfUFJPQ0VTU0lOR19BU1NJR04iLCJET0NVTUVOVF9QUk9DRVNTSU5HX1JFUVVFVUUiLCJQUk9KRUNUX1VTRVJfQ0FHX0NIQU5HRSIsIkRPQ1VNRU5UX1BST0NFU1NJTkdfVVBMT0FEIiwiUFJPSkVDVF9NQU5HX1ZJRVciLCJQUk9KRUNUX0ZBVk9SSVRFX1ZJRVciLCJQUk9KRUNUX0NBR19DUkVBVEUiLCJQUk9KRUNUX0ZJTEVST09NX0FERCIsIkRPQ1VNRU5UX1BST0NFU1NJTkdfU0VORFRPTUFOVUFMIiwiUFJPSkVDVF9XQVRFUk1BUktfRU5BQkxFIiwiUFJPSkVDVF9DT05URU5UX1VQREFURSIsIlBST0pFQ1RfQ0FHX1ZJRVciLCJET0NVTUVOVF9QUk9DRVNTSU5HX1VOQVNTSUdOIiwiUFJPSkVDVF9VU0VSX0lOVklURSIsIkRPQ1VNRU5UX1BST0NFU1NJTkdfTElTVCIsIkRPQ1VNRU5UX1BST0NFU1NJTkdfUkVKRUNUIiwiUFJPSkVDVF9DT05URU5UX1NFQVJDSCIsIlBST0pFQ1RfVVNFUl9BQ1RJVkFURSIsIlBST0pFQ1RfQ09OVEVOVF9QRVJNQU5FTlRfREVMRVRFIiwiUFJPSkVDVF9ERUFDVElWQVRFIiwiUFJPSkVDVF9DT05URU5UX1JFTkFNRSIsIkRFTEVURV9JTlZJVEFUSU9OIiwiUFJPSkVDVF9QUk9DRVNTSU5HUVVFVUVfVklFVyIsIlBST0pFQ1RfVVNFUl9GQUdfQ0hBTkdFIiwiVVNFUl9GQVZPUklURV9DQVRFR09SWV9DUkVBVEUiLCJQUk9KRUNUX0NPTlRFTlRfREVMRVRFIiwiUFJPSkVDVF9DT05URU5UX0NPUFkiLCJQUk9KRUNUX05FV0ZJTEVTX1ZJRVciLCJQUk9KRUNUX0ZPTERFUl9BREQiLCJQUk9KRUNUX0ZJTEVST09NX0FDVElWQVRFIiwiR0xPQkFMX1BST0pFQ1RfQUNDRVNTIiwiUFJPSkVDVF9SRVBPUlRTX1ZJRVciXSwiZmlyc3ROYW1lIjoiZHVtbXkiLCJsYXN0TmFtZSI6Im9uZSIsImNvbXBhbnkiOiJNZXJyaWxsIENvcnBvcmF0aW9uIiwidXNlclR5cGUiOiIiLCJwbGF0Zm9ybVVzZXJUeXBlIjoidGVjaF9zZXJ2aWNlIiwicHJvamVjdFVzZXJUeXBlIjpudWxsLCJjbGFpbXNUeXBlIjoiTUVSUklMTF9VU0VSIiwibWVycmlsbFVzZXIiOnRydWUsInVzZXJfbmFtZSI6ImR1bW15b25lQG1lcnJpbGxjb3JwLmNvbSJ9.-76er8V8QJwIT3cH6FcQ2TrS6SrWVtA3XHyqexXKkvo
+Headers:		Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1OTZlNGQ3OTU5ZGYyYjAwMTBjYzBiYTUiLCJleHAiOjE1MDUzODI3MTEsInNlc3Npb25JZCI6bnVsbCwicHJvamVjdElkIjpudWxsLCJjb250ZW50QWNjZXNzR3JvdXBJZCI6IiIsImNvbnRlbnRBY2Nlc3NHcm91cE5hbWUiOiIiLCJmZWF0dXJlQWNjZXNzR3JvdXBJZCI6IiIsInRlYW1JZCI6bnVsbCwidGVhbU5hbWUiOm51bGwsImdsb2JhbEFjY2Vzc0dyb3VwSWQiOiI1OWI4M2M0ZjExYmZlNzVmZmY5N2YxZWEiLCJhdXRob3JpdGllcyI6WyJQUk9KRUNUX1VTRVJfVklFVyIsIlBST0pFQ1RfQ09OVEVOVF9ET1dOTE9BRF9CVUxLIiwiUFJPSkVDVF9VUERBVEUiLCJVU0VSX0ZBVk9SSVRFX0NBVEVHT1JZX1ZJRVciLCJQTEFURk9STV9TRU5EX0VNQUlMIiwiVVNFUl9GQVZPUklURV9DQVRFR09SWV9ERUxFVEUiLCJQUk9KRUNUX0NPTlRFTlRfUkVQTEFDRSIsIlBST0pFQ1RfQ09OVEVOVF9ET1dOTE9BRCIsIlBST0pFQ1RfU0VUVElOR1NfVVBEQVRFIiwiUFJPSkVDVF9GUEdfTUFOQUdFIiwiVVNFUl9GQVZPUklURV9DQVRFR09SWV9VUERBVEUiLCJQUk9KRUNUX01BTkFHRV9VU0VSUyIsIklOVEVSTkFMVE9PTF9VU0VSSU5GT19HRVQiLCJQUk9KRUNUX0NPTlRFTlRfVVBMT0FEIiwiUFJPSkVDVF9DT05URU5UX1BFUk1JU1NJT05TIiwiUFJPSkVDVF9GUEdfVklFVyIsIlBST0pFQ1RfQ1BHX01BTkFHRSIsIlBST0pFQ1RfRklMRVJPT01fREVBQ1RJVkFURSIsIlBST0pFQ1RfQUNUSVZBVEUiLCJQUk9KRUNUX0NPTlRFTlRfTU9WRSIsIlBST0pFQ1RfQ0FHX0RFTEVURSIsIlBST0pFQ1RfRE9DVU1FTlRfVklFVyIsIlBST0pFQ1RfVVNFUl9ERUFDVElWQVRFIiwiRE9DVU1FTlRfUFJPQ0VTU0lOR19ET1dOTE9BRCIsIlBST0pFQ1RfUEVSTUlTU0lPTl9WSUVXIiwiUFJPSkVDVF9UUkFTSF9WSUVXIiwiQ1JFQVRFX0lOVklUQVRJT04iLCJQUk9KRUNUX0NBR19FRElUIiwiUFJPSkVDVF9DUkVBVEUiLCJET0NVTUVOVF9QUk9DRVNTSU5HX0FTU0lHTiIsIkRPQ1VNRU5UX1BST0NFU1NJTkdfUkVRVUVVRSIsIlBST0pFQ1RfVVNFUl9DQUdfQ0hBTkdFIiwiRE9DVU1FTlRfUFJPQ0VTU0lOR19VUExPQUQiLCJQUk9KRUNUX01BTkdfVklFVyIsIlBST0pFQ1RfRkFWT1JJVEVfVklFVyIsIlBST0pFQ1RfQ0FHX0NSRUFURSIsIlBST0pFQ1RfRklMRVJPT01fQUREIiwiRE9DVU1FTlRfUFJPQ0VTU0lOR19TRU5EVE9NQU5VQUwiLCJQUk9KRUNUX1dBVEVSTUFSS19FTkFCTEUiLCJQUk9KRUNUX0NPTlRFTlRfVVBEQVRFIiwiUFJPSkVDVF9DQUdfVklFVyIsIkRPQ1VNRU5UX1BST0NFU1NJTkdfVU5BU1NJR04iLCJQUk9KRUNUX1VTRVJfSU5WSVRFIiwiRE9DVU1FTlRfUFJPQ0VTU0lOR19MSVNUIiwiRE9DVU1FTlRfUFJPQ0VTU0lOR19SRUpFQ1QiLCJQUk9KRUNUX0NPTlRFTlRfU0VBUkNIIiwiUFJPSkVDVF9VU0VSX0FDVElWQVRFIiwiUFJPSkVDVF9DT05URU5UX1BFUk1BTkVOVF9ERUxFVEUiLCJQUk9KRUNUX0RFQUNUSVZBVEUiLCJQUk9KRUNUX0NPTlRFTlRfUkVOQU1FIiwiREVMRVRFX0lOVklUQVRJT04iLCJQUk9KRUNUX1BST0NFU1NJTkdRVUVVRV9WSUVXIiwiUFJPSkVDVF9VU0VSX0ZBR19DSEFOR0UiLCJVU0VSX0ZBVk9SSVRFX0NBVEVHT1JZX0NSRUFURSIsIlBST0pFQ1RfQ09OVEVOVF9ERUxFVEUiLCJQUk9KRUNUX0NPTlRFTlRfQ09QWSIsIlBST0pFQ1RfTkVXRklMRVNfVklFVyIsIlBST0pFQ1RfRk9MREVSX0FERCIsIlBST0pFQ1RfRklMRVJPT01fQUNUSVZBVEUiLCJHTE9CQUxfUFJPSkVDVF9BQ0NFU1MiLCJQUk9KRUNUX1JFUE9SVFNfVklFVyJdLCJmaXJzdE5hbWUiOiJkdW1teSIsImxhc3ROYW1lIjoib25lIiwiY29tcGFueSI6Ik1lcnJpbGwgQ29ycG9yYXRpb24iLCJ1c2VyVHlwZSI6IiIsInBsYXRmb3JtVXNlclR5cGUiOiJ0ZWNoX3NlcnZpY2UiLCJwcm9qZWN0VXNlclR5cGUiOm51bGwsImNsYWltc1R5cGUiOiJNRVJSSUxMX1VTRVIiLCJtZXJyaWxsVXNlciI6dHJ1ZSwidXNlcl9uYW1lIjoiZHVtbXlvbmVAbWVycmlsbGNvcnAuY29tIn0.1_YjTYsXii_y7xJFz_r-QunqKDNc3JWMEhivkR-IKrY
 				Accept=application/json
 				Content-Type=application/json; charset=UTF-8
 Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
-####################### Printing Response Logs for ManualProcessingGetUserInfo #######################
+
+####################### Printing Response Logs for GetUserInfo API #######################
+
 HTTP/1.1 200 OK
 Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 Content-Type: application/json;charset=UTF-8
-Date: Tue, 12 Sep 2017 05:10:33 GMT
+Date: Wed, 13 Sep 2017 09:51:54 GMT
 Expires: 0
 Pragma: no-cache
 Strict-Transport-Security: max-age=31536000 ; includeSubDomains
-X-Application-Context: doc-conversion:cloud:3
+X-Application-Context: doc-conversion:cloud:0
 X-Content-Type-Options: nosniff
 X-Frame-Options: DENY
-X-Vcap-Request-Id: 8fade15d-3faa-493b-5172-010210d9fe6f
+X-Vcap-Request-Id: 109b73b6-2dd2-4023-4484-e01d4f096675
 X-Xss-Protection: 1; mode=block
 Content-Length: 67
 
@@ -470,4 +75,3 @@ Content-Length: 67
     "fName": "dummy",
     "userId": "596e4d7959df2b0010cc0ba5"
 }
-
