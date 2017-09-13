@@ -5,7 +5,9 @@ import static io.restassured.RestAssured.given;
 import java.io.IOException;
 
 import com.restassured.merrill.reusables.BaseClass;
+import com.restassured.merrill.reusables.Convert;
 
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
@@ -57,6 +59,18 @@ public class Keywords extends BaseClass {
 		validateResponse = 	response.then().assertThat().statusCode(statusCode);
 		
 		return validateResponse;
+		
+	}
+	
+	public static String validateResponse(String getValueOfField){
+		
+		String ValueOfTagInResponse = 	response.then().extract().asString();
+		
+		JsonPath jp = Convert.rawToJson(ValueOfTagInResponse);
+		
+		return jp.get(getValueOfField);
+		
+		
 		
 	}
 
