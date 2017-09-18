@@ -30,7 +30,7 @@ import com.restassured.merrill.reusables.Convert;
 
 public class BaseClass {
 
-	public static RequestSpecification request;
+	public static RequestSpecification requestSpec;
 	public static Response response;
 	public static ValidatableResponse validateResponse;
 	

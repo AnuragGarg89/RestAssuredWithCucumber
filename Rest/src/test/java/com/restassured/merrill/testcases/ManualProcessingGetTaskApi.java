@@ -32,7 +32,7 @@ public class ManualProcessingGetTaskApi extends BaseClass {
 	@Given("^user has filter field with corresponding filter values$")
 	public void user_has_filter_field() throws Throwable {
 		
-		request.log().all();
+		requestSpec.log().all();
 		
 	}
 

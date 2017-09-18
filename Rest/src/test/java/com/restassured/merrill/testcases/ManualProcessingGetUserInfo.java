@@ -15,15 +15,15 @@ public class ManualProcessingGetUserInfo extends BaseClass {
 	public void user_has_a_JWT_Token() throws Throwable {
 
 		printRequestLogs("GetUserInfo API");
-		request = Keywords.returnRequestSpec();
-		request.log().all();
+		requestSpec = Keywords.returnRequestSpecNoParam();
+		requestSpec.log().all();
 
 	}
 
 	@When("^user hits the getUserInfo api$")
 	public void user_hits_the_getUserInfo_api() throws Throwable {
 		
-		response = Keywords.returnResponeSpecForGet("END_POINT_USERINFO");
+		response = Keywords.returnResponeForGet("END_POINT_USERINFO");
 
 	}
 

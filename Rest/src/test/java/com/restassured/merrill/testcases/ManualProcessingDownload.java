@@ -13,13 +13,13 @@ public class ManualProcessingDownload extends BaseClass {
 	public void user_has_a_unique_task_id() throws Throwable {
 
 		printRequestLogs("Download API");
-		request = Keywords.returnRequestSpec("uniqueTaskId");
-		request.log().all();
+		requestSpec = Keywords.returnRequestSpecPathParam("uniqueTaskId", 3987);
+		requestSpec.log().all();
 	}
 
 	@When("^user hits the Download api$")
 	public void user_hits_the_Download_api() throws Throwable {
-		response = Keywords.returnResponeSpecForGet("END_POINT_DOWNLOAD");
+		response = Keywords.returnResponeForGet("END_POINT_DOWNLOAD");
 	}
 
 	@Then("^verify the status code is (\\d+)$")
