@@ -5,8 +5,8 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(	features = "./", 
-					glue = {"com.restassured.merrill.testcases"},
+@CucumberOptions(	features = "./Features/Reject.feature", 
+					glue = {"com.restassured.merrill.stepdefinitions"},
 					format = {"pretty","html:./cucumber-html-report"})
 				
 

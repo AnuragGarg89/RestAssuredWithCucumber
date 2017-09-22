@@ -1,47 +1,60 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Features/Merrill.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("./Features/Reject.feature");
 formatter.feature({
   "line": 1,
-  "name": "Merrill Api\u0027s",
+  "name": "Reject Api\u0027s",
   "description": "",
-  "id": "merrill-api\u0027s",
+  "id": "reject-api\u0027s",
   "keyword": "Feature"
 });
 formatter.scenario({
   "line": 3,
-  "name": "Test Manual processing Download Api",
+  "name": "Test Manual processing RejectTask Api",
   "description": "",
-  "id": "merrill-api\u0027s;test-manual-processing-download-api",
+  "id": "reject-api\u0027s;test-manual-processing-rejecttask-api",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
   "line": 4,
-  "name": "user has a unique task id",
+  "name": "user has Path of Reject Json File in which payload is defined",
   "keyword": "Given "
 });
 formatter.step({
   "line": 5,
-  "name": "user hits the Download api",
+  "name": "user hits the Manual RejectTask API",
   "keyword": "When "
 });
 formatter.step({
   "line": 6,
-  "name": "verify the status code is 200",
+  "name": "verify the rejectreason from database",
   "keyword": "Then "
 });
+formatter.step({
+  "line": 7,
+  "name": "verify the status code is 200",
+  "keyword": "And "
+});
 formatter.match({
-  "location": "ManualProcessingDownload.user_has_a_unique_task_id()"
+  "location": "Reject.user_has_Path_of_Reject_Json_File_in_which_payload_is_defined()"
 });
 formatter.result({
-  "duration": 2644016821,
+  "duration": 2932268036,
   "status": "passed"
 });
 formatter.match({
-  "location": "ManualProcessingDownload.user_hits_the_Download_api()"
+  "location": "Reject.user_hits_the_Manual_RejectTask_API()"
 });
 formatter.result({
-  "duration": 2477317178,
+  "duration": 3250432644,
   "status": "passed"
+});
+formatter.match({
+  "location": "Reject.verify_the_rejectreason_from_database()"
+});
+formatter.result({
+  "duration": 112945834671,
+  "error_message": "java.lang.IllegalStateException: state should be: open\r\n\tat com.mongodb.assertions.Assertions.isTrue(Assertions.java:70)\r\n\tat com.mongodb.connection.BaseCluster.selectServer(BaseCluster.java:82)\r\n\tat com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.\u003cinit\u003e(ClusterBinding.java:75)\r\n\tat com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.\u003cinit\u003e(ClusterBinding.java:71)\r\n\tat com.mongodb.binding.ClusterBinding.getReadConnectionSource(ClusterBinding.java:63)\r\n\tat com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:404)\r\n\tat com.mongodb.operation.FindOperation.execute(FindOperation.java:709)\r\n\tat com.mongodb.operation.FindOperation.execute(FindOperation.java:81)\r\n\tat com.mongodb.Mongo.execute(Mongo.java:810)\r\n\tat com.mongodb.Mongo$2.execute(Mongo.java:797)\r\n\tat com.mongodb.OperationIterable.iterator(OperationIterable.java:47)\r\n\tat com.mongodb.FindIterableImpl.iterator(FindIterableImpl.java:200)\r\n\tat com.restassured.merrill.reusables.DBConnection.getMyData(DBConnection.java:81)\r\n\tat com.restassured.merrill.stepdefinitions.Reject.verify_the_rejectreason_from_database(Reject.java:49)\r\n\tat ✽.Then verify the rejectreason from database(./Features/Reject.feature:6)\r\n",
+  "status": "failed"
 });
 formatter.match({
   "arguments": [
@@ -50,60 +63,9 @@ formatter.match({
       "offset": 26
     }
   ],
-  "location": "ManualProcessingDownload.verify_the_status_code_is(int)"
+  "location": "Common.verify_the_status_code_is(int)"
 });
 formatter.result({
-  "duration": 39418389,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 8,
-  "name": "Test Manual processing getUserInfo Api",
-  "description": "",
-  "id": "merrill-api\u0027s;test-manual-processing-getuserinfo-api",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 9,
-  "name": "user has JWT Token",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 10,
-  "name": "user hits the getUserInfo api",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 11,
-  "name": "check response code is 200",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "ManualProcessingGetUserInfo.user_has_a_JWT_Token()"
-});
-formatter.result({
-  "duration": 771568353,
-  "status": "passed"
-});
-formatter.match({
-  "location": "ManualProcessingGetUserInfo.user_hits_the_getUserInfo_api()"
-});
-formatter.result({
-  "duration": 2349717747,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "200",
-      "offset": 23
-    }
-  ],
-  "location": "ManualProcessingGetUserInfo.check_response_code_is(int)"
-});
-formatter.result({
-  "duration": 1314326,
-  "status": "passed"
+  "status": "skipped"
 });
 });

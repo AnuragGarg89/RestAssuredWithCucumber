@@ -14,28 +14,27 @@ import com.restassured.merrill.reusables.Convert;
 import io.restassured.path.json.JsonPath;
 import io.restassured.path.xml.XmlPath;
 import io.restassured.response.Response;
-import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
 
 public class Keywords extends BaseClass {
+	
+	public RequestSpecification returnRequestSpecWithoutParam() throws IOException {
 
-	public static RequestSpecification returnRequestSpecNoParam() throws IOException {
-
-		requestSpec = given().headers(BaseClass.setHeaders());
+		requestSpec = given().headers(setHeaders());
 		return requestSpec;
 
 	}
 
-	public static RequestSpecification returnRequestSpecPathParam(String pathParamName, Object value)
+	public RequestSpecification returnRequestSpecWithPathParam(String pathParamName, Object value)
 			throws IOException {
 
 		// requestSpec = given().headers(BaseClass.setHeaders()).pathParam(pathParamName, data.getProperty(pathParamName));
-		requestSpec = given().headers(BaseClass.setHeaders()).pathParam(pathParamName, value);
+		requestSpec = given().headers(setHeaders()).pathParam(pathParamName, value);
 		return requestSpec;
 
 	}
 
-	public static RequestSpecification returnRequestSpecQueryParam(String param[], Object value[]) throws IOException {
+	public RequestSpecification returnRequestSpecWithQueryParam(String param[], Object value[]) throws IOException {
 
 		Map<String, Object> queryParam = new HashMap<String, Object>();
 		int numOfParamteres = param.length;
@@ -49,47 +48,49 @@ public class Keywords extends BaseClass {
 			logger.log(LogStatus.ERROR, "Either Parameter or Value Missing");
 		}
 
-		requestSpec = given().headers(BaseClass.setHeaders()).queryParams(queryParam);
+		requestSpec = given().headers(setHeaders()).queryParams(queryParam);
 		return requestSpec;
 
 	}
 
-	public static RequestSpecification returnRequestSpecBody(String filePath){
-		
-		File f = new File(filePath);
-		requestSpec = given().headers(BaseClass.setHeaders()).body(f);		
+	public RequestSpecification returnRequestSpecWithBody(String filePath) {
+		try {
+			File f = new File(filePath);
+			requestSpec = given().headers(setHeaders()).body(f);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		return requestSpec;
 	}
-	
-	public static Response returnResponeForGet(String EndPoint) throws IOException {
+
+	public Response returnResponeForGet(String EndPoint) throws IOException {
 
 		response = requestSpec.when().get(config.getProperty(EndPoint));
 		return response;
 
 	}
 
-	public static Response returnResponeForPost(String EndPoint) throws IOException {
+	public Response returnResponeForPost(String EndPoint) throws IOException {
 
 		response = requestSpec.when().post(config.getProperty(EndPoint));
 		return response;
 
 	}
 
-	public static Response returnResponeForPut(String EndPoint) throws IOException {
+	public Response returnResponeForPut(String EndPoint) throws IOException {
 
 		response = requestSpec.when().put(config.getProperty(EndPoint));
 		return response;
 
 	}
 
-	public static ValidatableResponse validateResponse(int statusCode) {
+	public void validateResponse(int statusCode) {
 
-		validateResponse = response.then().assertThat().statusCode(statusCode);
-		return validateResponse;
+		response.then().assertThat().statusCode(statusCode);
 
 	}
 
-	public static String validateResponse(String getValueOfField) {
+	public String validateResponse(String getValueOfField) {
 
 		String responseType = response.getHeader("content-type");
 

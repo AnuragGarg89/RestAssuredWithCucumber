@@ -26,52 +26,52 @@ import io.restassured.specification.RequestSpecification;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-import com.restassured.merrill.reusables.Convert;
 
 public class BaseClass {
 
 	public static RequestSpecification requestSpec;
 	public static Response response;
 	public static ValidatableResponse validateResponse;
-	
-	public static ExtentTest logger;
+	public WebDriver driver;
 
 	public static Properties config;
 	public static Properties data;
-	public static File f;
+	
+	public static ExtentTest logger;
 	public static ExtentReports report;
-	public static WebDriver driver;
-	public static String reportPath;
+	
+	public static String extenetReportPath;
+	public static String extenReportFileName;
 	public static String projectPath;
-	public static String filename;
+	public static String applicationLogPath;	
+	
+	
+	public static File f;
 	public static FileInputStream fis;
 	public static FileOutputStream fileOutPutStream;
 	public static PrintStream printStream;
-	public static String logPath;
-
+	
 	static {
 
 		try {
 
 			projectPath = System.getProperty("user.dir");
-			logPath = projectPath + "\\log\\application.log";
+			applicationLogPath = projectPath + "\\log\\application.log";
 
-			f = new File(logPath);
+			f = new File(applicationLogPath);
 			fileOutPutStream = new FileOutputStream(f);
 			printStream = new PrintStream(fileOutPutStream);
-
 			RestAssured.config = RestAssured.config().logConfig(new LogConfig().defaultStream(printStream));
 			
-			filename = new SimpleDateFormat("ddMMyyyy-hhmmss").format(new Date());
-
-			reportPath = projectPath + "\\Output\\ExtentReports\\MerrillTesting" + filename + ".html";
+			extenReportFileName = new SimpleDateFormat("ddMMyyyyhhmmss").format(new Date());
+			//extenetReportPath = projectPath + "\\Output\\ExtentReports\\MerrillTesting" + extenReportFileName + ".html";
+			extenetReportPath = projectPath + "\\Output\\ExtentReports\\MerrillTesting.html";
 
 			// System.setProperty("webdriver.gecko.driver",projectPath+"\\geckodriver.exe");
 			System.setProperty("webdriver.chrome.driver", projectPath + "\\chromedriver.exe");
-			report = new ExtentReports(reportPath, true);
+			report = new ExtentReports(extenetReportPath, false);
 			
-			LoadDataPropFile();
-			
+			LoadDataPropFile();			
 			LoadConfigPropFile();
 
 		} catch (Throwable e) {
@@ -111,8 +111,9 @@ public class BaseClass {
 		}
 
 	}
+	
 
-	public static String getToken() {
+	public String getToken() {
 
 		String res = given().header("Content-Type", "application/json")
 				.body("{" + "\"password\": \"Password1!\"," + "\"username\": \"dummyone@merrillcorp.com\"" + "}").when()
@@ -124,40 +125,57 @@ public class BaseClass {
 
 	}
 
-	public static Map<String, String> setHeaders() {
+	public Map<String, String> setHeaders() {
 
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("Content-Type", "application/json");
 		map.put("Accept", "application/json");
-		map.put("Authorization", "Bearer " + getToken());
+		map.put("Authorization", "Bearer " +getToken());
 
 		return map;
-	}
+	}	
 	
-	
-	public static void printRequestLogs(String testName){
+	public void printRequestLogs(String testName){
 		
-		logger = report.startTest("TESTING "+testName+" API");
-		logger.log(LogStatus.INFO, "SETTING HEADERS AND PATH PARAMETERS");
+		logger = report.startTest("TESTING "+testName);
 		
+		logger.log(LogStatus.INFO, "START TEST");
+				
 		printStream.println();		
 		printStream.println("####################### Printing Request Logs for "+testName+" #######################");		
 		printStream.println();
 		
-		logger.log(LogStatus.INFO, "CHECK LOG FOLDER "+logPath+" FOR REQUEST LOGS");		
+		logger.log(LogStatus.INFO, "CHECK LOG FOLDER "+applicationLogPath+" FOR REQUEST LOGS");		
 		
 		
 	}
 	
-	public static void printResponseLogs(String testName){
+	public void printResponseLogs(String testName){
 		
 		printStream.println();		
 		printStream.println("####################### Printing Response Logs for "+testName+" #######################");		
 		printStream.println();
 		
-		logger.log(LogStatus.INFO, "CHECK LOG FOLDER "+logPath+" FOR RESPONSE LOGS");		
+		logger.log(LogStatus.INFO, "CHECK LOG FOLDER "+applicationLogPath+" FOR RESPONSE LOGS");		
 		logger.log(LogStatus.PASS, testName+" IS UP AND RUNNING");		
 		logger.log(LogStatus.INFO, "END TEST");
+		/*
+		driver = new ChromeDriver();
+		try {
+			Thread.sleep(8000L);
+			driver.get(extenetReportPath);
+			Thread.sleep(5000L);
+		} catch (InterruptedException e) {
+				e.printStackTrace();
+		}		
+		driver.close();
+		
+		printStream.flush();
+		printStream.close();
+		*/
+		
+		report.endTest(logger);
+		report.flush();
 		
 	}
 }
