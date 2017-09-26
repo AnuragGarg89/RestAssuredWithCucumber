@@ -1,0 +1,52 @@
+
+####################### Printing Request Logs for Filter Field API #######################
+
+Request method:	GET
+Request URI:	https://doc-conversion.apps.us2.dev.foundry.mrll.com/api/manualdoc/problemType/filterValues
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	filterField=problemType
+Headers:		Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1OTZlNGQ3OTU5ZGYyYjAwMTBjYzBiYTUiLCJleHAiOjE1MDY0MjMyOTIsInNlc3Npb25JZCI6bnVsbCwicHJvamVjdElkIjpudWxsLCJjb250ZW50QWNjZXNzR3JvdXBJZCI6IiIsImNvbnRlbnRBY2Nlc3NHcm91cE5hbWUiOiIiLCJmZWF0dXJlQWNjZXNzR3JvdXBJZCI6IiIsInRlYW1JZCI6bnVsbCwidGVhbU5hbWUiOm51bGwsImdsb2JhbEFjY2Vzc0dyb3VwSWQiOiI1OWM4MGU0ZDA2YmEwODhjOTZlMzE3NWUiLCJhdXRob3JpdGllcyI6WyJQUk9KRUNUX1VTRVJfVklFVyIsIlBST0pFQ1RfQ09OVEVOVF9ET1dOTE9BRF9CVUxLIiwiUFJPSkVDVF9VUERBVEUiLCJVU0VSX0ZBVk9SSVRFX0NBVEVHT1JZX1ZJRVciLCJQTEFURk9STV9TRU5EX0VNQUlMIiwiVVNFUl9GQVZPUklURV9DQVRFR09SWV9ERUxFVEUiLCJQUk9KRUNUX0NPTlRFTlRfUkVQTEFDRSIsIlBST0pFQ1RfQ09OVEVOVF9ET1dOTE9BRCIsIlBST0pFQ1RfU0VUVElOR1NfVVBEQVRFIiwiUFJPSkVDVF9GUEdfTUFOQUdFIiwiVVNFUl9GQVZPUklURV9DQVRFR09SWV9VUERBVEUiLCJQUk9KRUNUX01BTkFHRV9VU0VSUyIsIklOVEVSTkFMVE9PTF9VU0VSSU5GT19HRVQiLCJQUk9KRUNUX0NPTlRFTlRfVVBMT0FEIiwiUFJPSkVDVF9DT05URU5UX1BFUk1JU1NJT05TIiwiUFJPSkVDVF9GUEdfVklFVyIsIlBST0pFQ1RfQ1BHX01BTkFHRSIsIlBST0pFQ1RfRklMRVJPT01fREVBQ1RJVkFURSIsIlBST0pFQ1RfQUNUSVZBVEUiLCJQUk9KRUNUX0NPTlRFTlRfTU9WRSIsIlBST0pFQ1RfQ0FHX0RFTEVURSIsIlBST0pFQ1RfRE9DVU1FTlRfVklFVyIsIkRPQ1VNRU5UX1BST0NFU1NJTkdfRE9XTkxPQUQiLCJQUk9KRUNUX1BFUk1JU1NJT05fVklFVyIsIlBST0pFQ1RfVFJBU0hfVklFVyIsIlBST0pFQ1RfQ0FHX0VESVQiLCJQUk9KRUNUX0NSRUFURSIsIkRPQ1VNRU5UX1BST0NFU1NJTkdfQVNTSUdOIiwiRE9DVU1FTlRfUFJPQ0VTU0lOR19SRVFVRVVFIiwiRE9DVU1FTlRfUFJPQ0VTU0lOR19VUExPQUQiLCJQUk9KRUNUX01BTkdfVklFVyIsIlBST0pFQ1RfRkFWT1JJVEVfVklFVyIsIlBST0pFQ1RfQ0FHX0NSRUFURSIsIlBST0pFQ1RfRklMRVJPT01fQUREIiwiRE9DVU1FTlRfUFJPQ0VTU0lOR19TRU5EVE9NQU5VQUwiLCJQUk9KRUNUX1dBVEVSTUFSS19FTkFCTEUiLCJQUk9KRUNUX0NPTlRFTlRfVVBEQVRFIiwiUFJPSkVDVF9DQUdfVklFVyIsIkRPQ1VNRU5UX1BST0NFU1NJTkdfVU5BU1NJR04iLCJET0NVTUVOVF9QUk9DRVNTSU5HX0xJU1QiLCJET0NVTUVOVF9QUk9DRVNTSU5HX1JFSkVDVCIsIlBST0pFQ1RfQ09OVEVOVF9TRUFSQ0giLCJQUk9KRUNUX0NPTlRFTlRfUEVSTUFORU5UX0RFTEVURSIsIlBST0pFQ1RfREVBQ1RJVkFURSIsIlBST0pFQ1RfQ09OVEVOVF9SRU5BTUUiLCJQUk9KRUNUX1BST0NFU1NJTkdRVUVVRV9WSUVXIiwiVVNFUl9GQVZPUklURV9DQVRFR09SWV9DUkVBVEUiLCJQUk9KRUNUX0NPTlRFTlRfREVMRVRFIiwiUFJPSkVDVF9DT05URU5UX0NPUFkiLCJQUk9KRUNUX05FV0ZJTEVTX1ZJRVciLCJQUk9KRUNUX0ZPTERFUl9BREQiLCJQUk9KRUNUX0ZJTEVST09NX0FDVElWQVRFIiwiR0xPQkFMX1BST0pFQ1RfQUNDRVNTIiwiUFJPSkVDVF9SRVBPUlRTX1ZJRVciXSwiZmlyc3ROYW1lIjoiZHVtbXkiLCJsYXN0TmFtZSI6Im9uZSIsImNvbXBhbnkiOiJNZXJyaWxsIENvcnBvcmF0aW9uIiwidXNlclR5cGUiOiIiLCJwbGF0Zm9ybVVzZXJUeXBlIjoidGVjaF9zZXJ2aWNlIiwicHJvamVjdFVzZXJUeXBlIjpudWxsLCJjbGFpbXNUeXBlIjoiTUVSUklMTF9VU0VSIiwibWVycmlsbFVzZXIiOnRydWUsInVzZXJfbmFtZSI6ImR1bW15b25lQG1lcnJpbGxjb3JwLmNvbSJ9.MkbTv9ncRsMWg4uj3o8UwZ0wTUd6a5LHUfp5_oqd4dA
+				Accept=application/json
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+####################### Printing Response Logs for Filter Field API #######################
+
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Content-Type: application/json;charset=UTF-8
+Date: Mon, 25 Sep 2017 10:54:56 GMT
+Expires: 0
+Pragma: no-cache
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+X-Application-Context: doc-conversion:cloud:3
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Vcap-Request-Id: d19fa436-9ab8-4252-4ea7-252c7b8e6752
+X-Xss-Protection: 1; mode=block
+Content-Length: 593
+
+{
+    "totalRecords": 1,
+    "data": {
+        "filterField": "problemType",
+        "filterValue": [
+            "{ \"problemType\" : \"File is password protected\"}",
+            "{ \"problemType\" : \"Gray list file type\"}",
+            "{ \"problemType\" : \"Source file unavailable\"}",
+            "{ \"problemType\" : \"File heap size error\"}",
+            "{ \"problemType\" : \"Error in file conversion\"}",
+            "{ \"problemType\" : \"File is password Protected\"}",
+            "{ \"problemType\" : \"Excel page count exceeded\"}",
+            "{ \"problemType\" : \"Sent to Manual\"}",
+            "{ \"problemType\" : \"File Format Not Supported\"}",
+            "{ \"problemType\" : \"File format not supported\"}"
+        ]
+    },
+    "message": null
+}

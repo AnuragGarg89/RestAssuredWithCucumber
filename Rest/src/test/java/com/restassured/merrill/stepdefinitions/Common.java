@@ -13,7 +13,7 @@ public class Common extends BaseClass {
 	@Given("^user has a unique task id$")
 	public void user_has_a_unique_task_id() throws Throwable {
 
-		requestSpec = keywords.returnRequestSpecWithPathParam("uniqueTaskId", 3987);
+		requestSpec = keywords.returnRequestSpecWithPathParam("uniqueTaskId", data.getProperty("uniqueTaskId"));
 	}
 
 	@Then("^verify the status code is (\\d+)$")

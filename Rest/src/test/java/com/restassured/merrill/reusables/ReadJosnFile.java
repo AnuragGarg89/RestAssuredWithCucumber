@@ -17,7 +17,7 @@ public class ReadJosnFile {
 	JSONParser jParser;
 	JSONArray jArray;
 	Map<Object, Object> map;
-	Object value;
+	String value;
 
 	public ReadJosnFile(String path) {
 
@@ -36,7 +36,7 @@ public class ReadJosnFile {
 
 	}
 
-	public Object getKeyValue(Object keyName) {
+	public String getKeyValue(Object keyName) {
 		try {
 
 			for (int i = 0; i < jArray.size(); i++) {

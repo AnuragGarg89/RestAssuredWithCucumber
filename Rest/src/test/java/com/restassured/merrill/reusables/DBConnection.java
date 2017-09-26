@@ -10,7 +10,6 @@ import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
 
@@ -63,7 +62,7 @@ public class DBConnection extends BaseClass {
 		dbURI = "mongodb://" + userName + ":" + passWord + "@" + host + ":" + port;
 	}
 
-	public void testMongoConnection() {
+	public void openMongoConnection() {
 
 		try {
 
@@ -71,45 +70,107 @@ public class DBConnection extends BaseClass {
 			mongoClient = new MongoClient(mongoClientURI);
 			mongoDatabase = mongoClient.getDatabase(dbName);
 			mongoCollection = mongoDatabase.getCollection(collectionName);
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
-			
+
 		}
 
 	}
 
-	public Object getMyData(Object uniqueTaskId, Object key) {
+	public String getRejectReason(int uniqueTaskId, String fieldName) {
 
-		Object obj = new Object();
+		String str = "";
 		Bson filter = Filters.eq("uniqueTaskId", uniqueTaskId);
 		List<Document> all = mongoCollection.find(filter).into(new ArrayList<Document>());
-		 for (int i = 0; i < all.size(); i++) {
-			 Document doc = all.get(i);
-			 obj = doc.get(key);
-		 }
-		
-		MongoCursor<Document> mongoCursor = iterable.iterator();	
-		while (mongoCursor.hasNext()) {
-			Document doc = mongoCursor.next();
-			try {
-					obj = doc.get(key);				
-				/*if ((doc.get("uniqueTaskId") != null) && (doc.get("uniqueTaskId").equals(uniqueTaskId))) {
-					obj = doc.get(key);
-				}*/
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
+		for (int i = 0; i < all.size(); i++) {
+			Document doc = all.get(i);
+			str = doc.getString(fieldName);
 		}
+		return str;
+	}
+
+	public String getLastAction(int uniqueTaskId, String fieldName) {
+
+		String str = "";
+		Bson filter = Filters.eq("uniqueTaskId", uniqueTaskId);
+		List<Document> all = mongoCollection.find(filter).into(new ArrayList<Document>());
+		for (int i = 0; i < all.size(); i++) {
+			Document doc = all.get(i);
+			str = doc.getString(fieldName);
+		}
+		return str;
+	}
+
+	public boolean verifyTaskIdExistInDatabase(int uniqueTaskId) {
+		long count = 0;
+		Bson filter = Filters.eq("uniqueTaskId", uniqueTaskId);
+		count = mongoCollection.count(filter);
+		if (count == 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public long totalNumberOfRecords() {
+		long count = 0;
+		count = mongoCollection.count();
+		return count;
+
+	}
+
+	public boolean isRequeued(int uniqueTaskId) {
 		
-		mongoClient.close();
-		return obj;
+		boolean requeued = false;
+		Bson filter = Filters.eq("uniqueTaskId", uniqueTaskId);
+		List<Document> all = mongoCollection.find(filter).into(new ArrayList<Document>());
+		for (int i = 0; i < all.size(); i++) {
+			Document doc = all.get(i);
+			requeued = doc.getBoolean("isRequeued");
+		}
+		if (requeued) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 	
-	public static void main(String []args){
-		DBConnection dbc = new DBConnection();
-		dbc.testMongoConnection();
-		Object obj = dbc.getMyData(4002, "rejectReason");
-		obj.toString();
+	public boolean isRetry(int uniqueTaskId) {
+			
+			boolean retry = false;
+			Bson filter = Filters.eq("uniqueTaskId", uniqueTaskId);
+			List<Document> all = mongoCollection.find(filter).into(new ArrayList<Document>());
+			for (int i = 0; i < all.size(); i++) {
+				Document doc = all.get(i);
+				retry = doc.getBoolean("isRequeued");
+			}
+			if (retry) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+	
+	public String getCurrentState(int uniqueTaskId) {
+
+		String str = "";
+		Bson filter = Filters.eq("uniqueTaskId", uniqueTaskId);
+		List<Document> all = mongoCollection.find(filter).into(new ArrayList<Document>());
+		for (int i = 0; i < all.size(); i++) {
+			Document doc = all.get(i);
+			str = doc.getString("state");
+		}
+		return str;
+	}	
+
+	public void closeMongoConnection() {
+		mongoClient.close();
 	}
+
+	/*
+	 * public static void main(String []args){ DBConnection dbc = new
+	 * DBConnection(); dbc.testMongoConnection(); Object obj =
+	 * dbc.getMyData(7660, "rejectReason"); obj.toString(); }
+	 */
 }

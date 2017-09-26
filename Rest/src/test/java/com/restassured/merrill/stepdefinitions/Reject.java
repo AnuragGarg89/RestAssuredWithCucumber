@@ -14,15 +14,14 @@ import cucumber.api.java.en.When;
 
 public class Reject extends BaseClass{	
 	
-	Keywords keywords = new Keywords();
-	DBConnection conn = new DBConnection();
-	
 	String path = projectPath+"\\TestData\\ManualProcessing\\Reject.json";
 	
+	Keywords keywords = new Keywords();
+	DBConnection conn = new DBConnection();
 	ReadJosnFile jsonFile = new ReadJosnFile(path);	
 	
-	String key = "rejectReason";
-	Object keyValue;	
+	String rejectReason = "rejectReason";
+	String keyValue;	
 	
 	@Given("^user has Path of Reject Json File in which payload is defined$")
 	public void user_has_Path_of_Reject_Json_File_in_which_payload_is_defined() throws Throwable {
@@ -36,23 +35,28 @@ public class Reject extends BaseClass{
 		
 		printRequestLogs("Manual RejectTask Task API");
 		requestSpec.log().all();
-	    response = keywords.returnResponeForPut("END_POINT_REJECT");
-		
+	    response = keywords.returnResponeForPut("END_POINT_REJECT");		
 	
 	}
 	
 	@Then("^verify the rejectreason from database$")
 	public void verify_the_rejectreason_from_database() throws Throwable {
 	
-			conn.testMongoConnection();			
-			keyValue = jsonFile.getKeyValue(key);			
-			Object obj = conn.getMyData(jsonFile.getKeyValue("uniqueTaskId"), key);
+			conn.openMongoConnection();	
 			
-			Assert.assertEquals("Verifying Reject Reason", keyValue.toString().toLowerCase(), (String)obj);
-			
-			logger.log(LogStatus.INFO, "Reject Reason is: "+obj.toString());
+			String rejReason = conn.getRejectReason(Integer.parseInt(jsonFile.getKeyValue("uniqueTaskId")), rejectReason);			
+
+			logger.log(LogStatus.INFO, "REJECTING TASK ID : "+ Integer.parseInt(jsonFile.getKeyValue("uniqueTaskId")));			
+			logger.log(LogStatus.INFO, "EXPECTED REJECT REASON : "+ rejReason.toLowerCase());
+			logger.log(LogStatus.INFO, "ACTUAL REJECT REASON : "+ jsonFile.getKeyValue(rejectReason).toLowerCase());
+					
+			Assert.assertEquals("Verifying Reject Reason",jsonFile.getKeyValue(rejectReason).toLowerCase(), rejReason.toLowerCase());
+					
 			printResponseLogs("Manual RejectTask API");
+			
 			response.then().log().all();
+			
+			conn.closeMongoConnection();	
 		
 		
 	}
