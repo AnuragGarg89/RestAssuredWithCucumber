@@ -22,4 +22,16 @@ public class Common extends BaseClass {
 		keywords.validateResponse(statuscode);
 
 	}
+	
+	@Given("^user has an invalid unique task id$")
+	public void user_has_an_invalid_task_id() throws Throwable{
+		requestSpec = keywords.returnRequestSpecWithPathParam("uniqueTaskId", data.getProperty("InvalidUniqueTaskId"));
+	}
+
+
+	@Then("^javelin code is (\\d+)$")
+	public void javelinCode(int javelinCode)
+	{
+		response.then().assertThat().extract().jsonPath().param("code",javelinCode);
+	}
 }
