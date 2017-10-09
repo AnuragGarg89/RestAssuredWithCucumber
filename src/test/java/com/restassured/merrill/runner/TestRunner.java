@@ -5,7 +5,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(	features = "./Features/FilterField.feature", 
+@CucumberOptions(	features = "./Features/download.feature", 
 					glue = {"com.restassured.merrill.stepdefinitions"},
 					format = {"pretty","html:./cucumber-html-report"})
 				
